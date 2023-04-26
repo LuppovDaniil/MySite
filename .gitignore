@@ -132,4 +132,4 @@ dmypy.json
 .DS_Store
 
 # Django secret key
-proj_maths/conf.py
+proj_mysite/conf.py
