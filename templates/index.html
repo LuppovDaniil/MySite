@@ -1,61 +1,58 @@
 {% extends "base_page.html" %}
 
 {% block page-title %}
-Математика и её термины
+Язык фарси (персидский)
 {% endblock %}
 
 {% block page-lead %}
-Это страничка проекта про изучение математики. <br/>
-Этот проект и его исходный код можно использовать как reference или источник вдохновения для своего проекта.
+Эта страница посвещана изучению языка фарси. <br/>
+Фарси - ведущий язык иранской группы индоевропейской семьи языков, обладающий богатой многовековой литературной традицией, включая признанные шедевры мировой литературы.
 {% endblock %}
 
 {% block content %}
 <div class="container px-4 py-5" id="project-contents">
     <h2 class="pb-2 border-bottom">Что есть в этом проекте</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#cpu-fill"></use>
-                </svg>
-            </div>
-            <div>
-                <h3 class="fs-2">Список терминов</h3>
-                <p>Простая страница с контентом, который разложен в таблицу. Содержимое таблицы находится в текстовом
-                    файле (если вы уверенно себя чувствуете, замените текстовый файл на базу данных).</p>
-                <a href="/terms-list" class="btn btn-primary">Посмотреть</a>
-            </div>
+    <div class="row mb-2">
+    <div class="col-md-4">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0">Словарь</h3>
+          <p class="card-text mb-auto">Страница, содержащая добавленные в словрь слова и их перевод. Материал представлен в виде таблицы</p>
+            <a href="/terms-list" class="btn btn-danger">Посмотреть</a>
         </div>
-        <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#cpu-fill"></use>
-                </svg>
-            </div>
-            <div>
-                <h3 class="fs-2">Форма для заполнения термина</h3>
-                <p>Пример POST-запроса, который отправится после того, как вы заполните форму. Он допишет термин в ваш
-                    текстовый файл, и если всё будет успешно — вас перенаправят на страницу терминов</p>
-                <a href="/add-term" class="btn btn-primary">
-                    Заполнить
-                </a>
-            </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="100" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
         </div>
-        <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#cpu-fill"></use>
-                </svg>
-            </div>
-            <div>
-                <h3 class="fs-2">Статистика</h3>
-                <p>Сколько терминов уже есть? Какой они длины?</p>
-                <a href="/stats" class="btn btn-primary">
-                    Изучить
-                </a>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="col-md-4">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0">Форма для добавления слова</h3>
+          <p class="card-text mb-auto">При помощи формы в этой странице вы можете добавлять новые слова в словарь</p>
+            <a href="/add-term" class="btn btn-danger"> Заполнить </a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="100" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+        </div>
+      </div>
+    </div>
+        <div class="col-md-4">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0">Статистика</h3>
+          <p class="mb-auto">Сколько слов уже добавлено? Какой они длины?</p>
+                <a href="/stats" class="btn btn-danger">Изучить</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="100" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+        </div>
+      </div>
+    </div>
+  </div>
     <h2 class="pb-2 border-bottom">Что можете сделать вы?</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
         <div class="col-lg-4">
