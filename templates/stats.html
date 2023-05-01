@@ -1,18 +1,17 @@
 {% extends "base_page.html" %}
 
 {% block page-title %}
-Статистика по терминам
+Статистика по словам
 {% endblock %}
 
 {% block page-lead %}
-Перед тем, как отрендерить эту страницу, веб-приложение ходит в файл/БД, обновляет статистики, а затем подставляет их в шаблон страницы.
-Всё это можно посмотреть в файле <code>views.py</code>.
+На этой странице представлена статистика по словам, добавленным в словарь.
 {% endblock %}
 
 {% block content %}
 <div class="container px-4 py-5" id="stats">
     <div>
-        <h3 class="py-2">Количество терминов</h3>
+        <h3 class="py-2">Количество слов</h3>
     </div>
     <div class="row text-center">
         <div class="col-md-4">
