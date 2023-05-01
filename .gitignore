@@ -133,3 +133,4 @@ dmypy.json
 
 # Django secret key
 proj_mysite/conf.py
+/static/dist.png
