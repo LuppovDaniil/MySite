@@ -1,3 +1,7 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 def get_terms_for_table():
     terms = []
     with open("./data/terms.csv", "r", encoding="utf-8") as f:
@@ -43,4 +47,19 @@ def get_terms_stats():
         "words_max": max(defin_len),
         "words_min": min(defin_len)
     }
+
+    built_plot()
+
     return stats
+
+def built_plot():
+    data = pd.read_csv('./data/terms.csv', sep =';')
+    disc_lens = data.explanation.apply(len)
+    plt.figure(figsize=(10, 7))
+    sns.histplot(disc_lens, binwidth=20, color='maroon')
+    plt.xlabel('Длина объяснения')
+    plt.ylabel('Число встречаемости')
+    plt.title("Длины объяснений")
+    plt.savefig('./static/dist.png')
+
+
