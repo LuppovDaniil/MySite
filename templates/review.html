@@ -1,0 +1,68 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Отзывы
+{% endblock %}
+
+{% block page-lead %}
+На этой странице Вы можете оставить отзыв
+{% endblock %}
+{% block content %}
+
+<div class="container-sm px-5 py-5" id="term-form">
+    <form method="post">
+
+        <div class="row px-5 py-2">
+            <h3>Ваши контактные данные</h3>
+        </div>
+        <div class="row px-5 py-2">
+            <div class="col-md-6">
+                <label for="name">Ваше имя:</label>
+                <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Иван" value="" required="">
+            </div>
+            <div class="col-md-6">
+                <label for="email">Ваш контактный email:</label>
+                <input type="text" class="form-control input-lg" name="email" id="email" placeholder="ivan@ivanov.com" value="" required="">
+            </div>
+        </div>
+        <div class="row px-5 py-1">
+        <h3>Оценка</h3>
+            <div class="my-3">
+      <div class="custom-control custom-radio d-inline">
+        <input id="5" name="grade" type="radio" class="custom-control-input" checked="" required="" value="5">
+        <label class="custom-control-label" for="5">5</label>
+      </div>
+      <div class="custom-control custom-radio d-inline">
+        <input id="4" name="grade" type="radio" class="custom-control-input" checked="" required=""  value="4">
+        <label class="custom-control-label" for="4">4</label>
+      </div>
+      <div class="custom-control custom-radio d-inline">
+        <input id="3" name="grade" type="radio" class="custom-control-input" checked="" required="" value="3">
+        <label class="custom-control-label" for="3">3</label>
+      </div>
+      <div class="custom-control custom-radio d-inline">
+        <input id="2" name="grade" type="radio" class="custom-control-input" checked="" required="" value="2">
+        <label class="custom-control-label" for="2">2</label>
+      </div>
+      <div class="custom-control custom-radio d-inline">
+        <input id="1" name="grade" type="radio" class="custom-control-input" checked="" required="" value="1">
+        <label class="custom-control-label" for="1">1</label>
+      </div>
+    </div>
+        </div>
+        <div class="row px-5 py-2">
+            <h3>Ваш отзыв</h3>
+        </div>
+        <div class="row px-5 py-2">
+            <div class="col-md-12">
+                <textarea type="text" class="form-control input-lg" name="review" id="review" aria-describedby="definition_note" rows="3"></textarea>
+                <label for="review">Спасибо за Ваш отзыв!</label>
+            </div>
+        </div>
+        <div class="row px-5 py-2 col-md-4">
+            <button type="submit" class="btn btn-danger" formaction="/send-review">Отправить</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.core.cache import cache
 from . import terms_work
+import pandas as pd
 
 
 def index(request):
@@ -43,3 +44,20 @@ def send_term(request):
 def show_stats(request):
     stats = terms_work.get_terms_stats()
     return render(request, "stats.html", stats)
+
+
+def show_review(request):
+    return render(request, "review.html")
+
+
+def send_review(request):
+    if request.method == "POST":
+        cache.clear()
+        user_name = request.POST.get("name")
+        grade = request.POST.get('grade')
+        review = request.POST.get("review", "")
+        reviews = pd.read_csv('./data/reviews.csv', sep=';')
+        reviews.loc[len(reviews)] = [user_name, grade, review]
+        #reviews = reviews.append({'user_name': user_name, 'grade': int(grade), 'review': review}, ignore_index=True)
+        reviews.to_csv('./data/reviews.csv', sep=';')
+    return render(request, "index.html")

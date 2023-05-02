@@ -12,7 +12,7 @@
 {% block content %}
 <div class="container px-0 py-0" id="project-contents">
     <h2 class="pb-2 border-bottom">Что есть в этом проекте</h2>
-    <div class="row mb-2">
+    <div class="row mb-2 border-bottom">
     <div class="col-md-4">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
@@ -50,6 +50,13 @@
       </div>
     </div>
   </div>
-
 </div>
+
+<h2 class="text-center pb-2 border-bottom">Оставьте отзыв!</h2>
+    <div class="col-lg-6 mx-auto">
+      <p class="text-center mb-auto">Мы стараемся все время улучшать наш сайт, поэтому обратная связь от Вас нам крайне важна!</p>
+    <div class="d-grid gap-2">
+        <a href="/review" type="button" class="btn btn-danger btn-lg">Отзыв</a>
+      </div>
+    </div>
 {% endblock %}

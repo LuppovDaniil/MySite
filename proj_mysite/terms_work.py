@@ -43,7 +43,7 @@ def get_terms_stats():
         "terms_all": db_terms + user_terms,
         "terms_own": db_terms,
         "terms_added": user_terms,
-        "words_avg": sum(defin_len)/len(defin_len),
+        "words_avg": round(sum(defin_len)/len(defin_len), 2),
         "words_max": max(defin_len),
         "words_min": min(defin_len)
     }
