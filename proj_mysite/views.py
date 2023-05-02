@@ -58,6 +58,7 @@ def send_review(request):
         review = request.POST.get("review", "")
         reviews = pd.read_csv('./data/reviews.csv', sep=';')
         reviews.loc[len(reviews)] = [user_name, grade, review]
+        print(len(reviews))
         #reviews = reviews.append({'user_name': user_name, 'grade': int(grade), 'review': review}, ignore_index=True)
-        reviews.to_csv('./data/reviews.csv', sep=';')
+        reviews.set_index('user_name').to_csv('./data/reviews.csv', sep=';')
     return render(request, "index.html")
